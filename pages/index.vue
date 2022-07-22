@@ -35,7 +35,15 @@ export default {
     }
   },
   methods: {
-
+    async getuser() {
+      await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
+      if (liff.isLoggedIn()) {
+        let getProfile = await liff.getProfile();
+        this.test = getProfile
+      } else {
+        liff.login();
+      }
+    }
   },
   mounted() {
     if (process.client && window) {
@@ -44,16 +52,7 @@ export default {
   },
   created() {
     if (process.client) {
-
-      liff
-        .getProfile()
-        .then((profile) => {
-          const name = profile.displayName;
-          this.test = name
-        })
-        .catch((err) => {
-          console.log("error", err);
-        });
+      this.getuser()
     }
   },
 };
