@@ -3,10 +3,11 @@
   <div class="body-font font-Thasadith">
     <div class="px-4 mx-auto w-full max-w-8xl" style="margin-top: 10px;">
       <div class="grid grid-flow-row auto-rows-max mx-8 my-8">
-        <div v-if="user" class="p-6 bg-white rounded-lg   dark:bg-gray-800 dark:border-gray-700">
+        <div v-if="$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-center p-6 ">
-            <nuxt-img :provider="user.pictureUrl?'':'imgix'" @click="formImgShow = true;" class="cursor-pointer rounded max-h-56"
-              :src="user.pictureUrl != '' ? user.pictureUrl : '/user.png'" alt="User" />
+            <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" @click="formImgShow = true;"
+              class="cursor-pointer rounded max-h-56" :src="$nuxt.$store.state.user.pictureUrl != '' ? user.pictureUrl : '/user.png'"
+              alt="User" />
           </div>
           <div class="flex flex-col items-center pb-10 ">
             <h5 class="break-all mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -34,8 +35,8 @@
       </button>
       <div class="relative p-4 w-full h-auto" style="z-index: 99">
         <div class="relative dark:bg-gray-700">
-          <nuxt-img style="margin: auto; max-height: 90vh" provider="imgix" class="mr-3"
-            :src="user.pictureUrl != '' ? user.pictureUrl : '/user.png'" alt="User" />
+          <nuxt-img style="margin: auto; max-height: 90vh" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="mr-3"
+            :src="$nuxt.$store.state.user.pictureUrl != '' ? user.pictureUrl : '/user.png'" alt="User" />
         </div>
       </div>
     </div>
@@ -53,15 +54,7 @@ export default {
     }
   },
   methods: {
-    async getuser() {
-      await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
-      if (liff.isLoggedIn()) {
-        let getProfile = await liff.getProfile();
-        this.user = getProfile
-      } else {
-        liff.login();
-      }
-    }
+   
   },
   mounted() {
     if (process.client && window) {
@@ -71,7 +64,7 @@ export default {
   created() {
     if (process.client) {
      
-      this.getuser()
+          
       
     }
   },

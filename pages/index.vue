@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  layout: "default",
+  layout: "Menu",
   head() {
     return {
       title: "Intarat | Home",
