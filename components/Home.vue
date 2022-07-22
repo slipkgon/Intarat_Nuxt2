@@ -57,7 +57,7 @@ export default {
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
-        this.test = getProfile
+        this.user = getProfile
       } else {
         liff.login();
       }
@@ -70,9 +70,9 @@ export default {
   },
   created() {
     if (process.client) {
-      /*
+     
       this.getuser()
-      */
+      
     }
   },
 }
