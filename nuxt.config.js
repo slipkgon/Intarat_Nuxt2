@@ -85,7 +85,6 @@ export default {
       fileName: "ST.png",
       sizes: [64, 120, 144, 152, 192, 384, 512],
     },
-
     start_url: "/",
   },
   generate: {
@@ -109,4 +108,5 @@ export default {
           .map((f) => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`),
     },
   },
+  serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }]
 };
