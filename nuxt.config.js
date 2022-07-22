@@ -11,6 +11,11 @@ export default {
       { hid: "description", name: "description", content: "Intarat" },
       { name: "format-detection", content: "telephone=no" },
     ],
+    script: [
+      {
+        src: "https://static.line-scdn.net/liff/edge/2.1/sdk.js",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
