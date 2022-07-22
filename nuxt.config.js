@@ -12,7 +12,6 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     script: [
-     
       {
         src: "https://static.line-scdn.net/liff/edge/2.1/liff.js",
       },
@@ -115,4 +114,11 @@ export default {
     },
   },
   serverMiddleware: [{ path: "/api", handler: "~/api/index.js" }],
+  image: {
+    /*dir: "static",*/
+    provider: "ipx",
+    imgix: {
+      baseURL: "/",
+    },
+  },
 };
