@@ -12,8 +12,9 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     script: [
+     
       {
-        src: "https://static.line-scdn.net/liff/edge/2.1/sdk.js",
+        src: "https://static.line-scdn.net/liff/edge/2.1/liff.js",
       },
     ],
   },
@@ -113,5 +114,5 @@ export default {
           .map((f) => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`),
     },
   },
-  serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }]
+  serverMiddleware: [{ path: "/api", handler: "~/api/index.js" }],
 };

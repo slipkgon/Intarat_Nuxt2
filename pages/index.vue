@@ -44,6 +44,7 @@ export default {
   },
   created() {
     if (process.client) {
+
       liff
         .getProfile()
         .then((profile) => {
