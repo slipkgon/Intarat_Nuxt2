@@ -5,7 +5,7 @@
       <div class="grid grid-flow-row auto-rows-max mx-8 my-8">
         <div v-if="user" class="p-6 bg-white rounded-lg   dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-center p-6 ">
-            <nuxt-img provider="imgix" @click="formImgShow = true;" class="cursor-pointer rounded max-h-56"
+            <nuxt-img :provider="user.pictureUrl?'':'imgix'" @click="formImgShow = true;" class="cursor-pointer rounded max-h-56"
               :src="user.pictureUrl != '' ? user.pictureUrl : '/user.png'" alt="User" />
           </div>
           <div class="flex flex-col items-center pb-10 ">
@@ -70,9 +70,9 @@ export default {
   },
   created() {
     if (process.client) {
-     
+     /*
       this.getuser()
-      
+      */
     }
   },
 }
