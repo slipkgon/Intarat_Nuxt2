@@ -47,6 +47,7 @@
       <div class="flex items-center md:order-2">
         <div v-if="!$nuxt.$store.state.user" class="rounded-full bg-slate-200 h-10 w-10"></div>
         <button v-if="$nuxt.$store.state.user" type="button" style="margin: auto"
+          @click="Dop == true ? (Dop = false) : (Dop = true)"
           class="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
           <span class="sr-only">Open user menu</span>
@@ -54,6 +55,16 @@
             :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
             alt=" User" />
         </button>
+        <div v-if="$nuxt.$store.state.user" :class="Dop == true ? 'Block' : 'hidden'"
+          style="position: fixed; top: 45px; right: 15px; margin-left: 15px"
+          class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+          id="dropdown">
+          <div class="py-3 px-4">
+            <span class="break-all block text-sm text-gray-900 dark:text-white">{{
+                $nuxt.$store.state.displayName
+            }}</span>
+          </div>
+        </div>
         <!-- Dropdown menu  -->
       </div>
       <div
@@ -178,7 +189,7 @@ export default {
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
-        this.user = getProfile
+        this.$nuxt.$store.commit("user", getProfile);
       } else {
         liff.login();
       }
@@ -186,9 +197,9 @@ export default {
   },
   created() {
     if (process.client) {
-      
+
       this.getuser()
-      
+
       /*
             this.$bus.$emit('unlock', Cookies.get('TOKEN_ID'))
             console.log(this.$nuxt.$store.state.valueunlock)
