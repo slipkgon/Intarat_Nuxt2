@@ -51,7 +51,7 @@
           class="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
           <span class="sr-only">Open user menu</span>
-          <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-10 h-10 rounded-full"
+          <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-10 h-10 rounded-full m-auto"
             :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
             alt=" User" />
         </button>
@@ -60,7 +60,7 @@
           class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="dropdown">
           <div class="py-3 px-4">
-            <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-10 h-10 rounded-full"
+            <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
               :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
               alt=" User" />
             <span class="break-all block text-sm text-gray-900 dark:text-white">{{
@@ -92,7 +92,7 @@
             </li>
 
             <li class="w-20 mr-3 flex-1 md:flex-none" style="margin: auto">
-              <NuxtLink to="/"
+              <NuxtLink to="/User"
                 class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
                 <svg width="25" height="25" viewBox="0 0 448 512" class="inline-block mb-1">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
