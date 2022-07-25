@@ -60,6 +60,9 @@
           class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="dropdown">
           <div class="py-3 px-4">
+            <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-10 h-10 rounded-full"
+              :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
+              alt=" User" />
             <span class="break-all block text-sm text-gray-900 dark:text-white">{{
                 $nuxt.$store.state.user.displayName
             }}</span>

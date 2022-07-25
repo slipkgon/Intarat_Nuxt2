@@ -6,15 +6,16 @@
         <div v-if="$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   ">
           <div class="flex justify-center p-6 ">
             <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" @click="formImgShow = true;"
-              class="cursor-pointer rounded max-h-56" :src="$nuxt.$store.state.user.pictureUrl != '' ? user.pictureUrl : '/user.png'"
+              class="cursor-pointer rounded max-h-56"
+              :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
               alt="User" />
           </div>
           <div class="flex flex-col items-center pb-10 ">
             <h5 class="break-all mb-1 text-xl font-medium text-gray-900 ">
-              {{ user.displayName }} </h5>
+              {{ $nuxt.$store.state.user.displayName }} </h5>
           </div>
         </div>
-        <div v-if="!user" class="p-6 bg-white rounded-lg   ">
+        <div v-if="!$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   ">
           <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 ">
             ไม่มีข้อมูล </h5>
         </div>
@@ -35,8 +36,10 @@
       </button>
       <div class="relative p-4 w-full h-auto" style="z-index: 99">
         <div class="relative ">
-          <nuxt-img style="margin: auto; max-height: 90vh" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="mr-3"
-            :src="$nuxt.$store.state.user.pictureUrl != '' ? user.pictureUrl : '/user.png'" alt="User" />
+          <nuxt-img style="margin: auto; max-height: 90vh" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'"
+            class="mr-3"
+            :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
+            alt="User" />
         </div>
       </div>
     </div>
@@ -54,7 +57,7 @@ export default {
     }
   },
   methods: {
-   
+
   },
   mounted() {
     if (process.client && window) {
@@ -63,9 +66,9 @@ export default {
   },
   created() {
     if (process.client) {
-     
-          
-      
+
+
+
     }
   },
 }
