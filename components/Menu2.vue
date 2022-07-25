@@ -61,7 +61,7 @@
           id="dropdown">
           <div class="py-3 px-4">
             <span class="break-all block text-sm text-gray-900 dark:text-white">{{
-                $nuxt.$store.state.displayName
+                $nuxt.$store.state.user.displayName
             }}</span>
           </div>
         </div>
@@ -186,6 +186,7 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY;
     }, async getuser() {
+      /* liffId จาก Line */
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
