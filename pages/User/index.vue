@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 ">
+      <b>การตั้งค่า</b>
+    </h5>
     <Home />
   </div>
 </template>

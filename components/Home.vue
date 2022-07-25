@@ -16,8 +16,7 @@
           </div>
         </div>
         <div v-if="!$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   ">
-          <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 ">
-            ไม่มีข้อมูล </h5>
+          
         </div>
 
       </div>

@@ -1,7 +1,8 @@
 <template>
   <div>
     <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 ">
-      หน้าแรก</h5>
+      <b>หน้าแรก</b>
+    </h5>
     <Home />
   </div>
 </template>
