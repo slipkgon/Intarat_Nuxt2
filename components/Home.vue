@@ -4,9 +4,9 @@
     <div class="px-4 mx-auto w-full max-w-8xl" style="margin-top: 10px;">
       <div class="grid grid-flow-row auto-rows-max mx-8 my-8">
         <div v-if="$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   ">
-          <div class="flex justify-center p-6 ">
+          <div class="flex justify-center p-6 max-h-56">
             <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" @click="formImgShow = true;"
-              class="cursor-pointer rounded max-h-56"
+              class="cursor-pointer rounded  w-56 h-56"
               :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
               alt="User" />
           </div>
