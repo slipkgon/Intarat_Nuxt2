@@ -35,8 +35,11 @@ export default {
         let getProfile = await liff.getProfile();
         /*เก็บ ข้อมูลลง store user*/
         this.$nuxt.$store.commit("user", getProfile);
-        document.querySelector("body").style.cssText = "";
-        this.showHideSpinner = false;
+        
+        setTimeout(() => {
+          document.querySelector("body").style.cssText = "";
+          this.showHideSpinner = false;
+        }, 1000)
       } else {
         liff.login();
       }
