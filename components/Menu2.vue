@@ -188,16 +188,6 @@ export default {
     },
     updateScroll() {
       this.scrollPosition = window.scrollY;
-    }, async getuser() {
-      /* liffId จาก Line */
-      await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
-      if (liff.isLoggedIn()) {
-        let getProfile = await liff.getProfile();
-        /*เก็บ ข้อมูลลง store user*/
-        this.$nuxt.$store.commit("user", getProfile);
-      } else {
-        liff.login();
-      }
     }
   },
   created() {

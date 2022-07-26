@@ -9,13 +9,13 @@
       <div class="px-4 mx-auto w-full max-w-8xl" style="margin-top: 90px; margin-bottom: 80px">
         <Nuxt />
       </div>
-     
+
     </div>
   </div>
 </template>
 
 <script>
-const Cookies = process.client ? require("js-cookie") : undefined;
+
 
 export default {
 
@@ -27,15 +27,22 @@ export default {
       showHideSpinner: true
     }
   },
-  methods: {},
-  mounted() {
-    if (process.client) {
-      setTimeout(() => {
+  methods: {
+    async getuser() {
+      /* liffId จาก Line */
+      await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
+      if (liff.isLoggedIn()) {
+        let getProfile = await liff.getProfile();
+        /*เก็บ ข้อมูลลง store user*/
+        this.$nuxt.$store.commit("user", getProfile);
         document.querySelector("body").style.cssText = "";
         this.showHideSpinner = false;
-      }, 2000);
+      } else {
+        liff.login();
+      }
     }
-
+  },
+  mounted() {
     if (process.client && window) {
       window.history.scrollRestoration = "auto";
     }
@@ -49,7 +56,7 @@ export default {
   },
   created() {
     if (process.client) {
-    
+      this.getuser()
 
       /*
             if (!Cookies.get("TOKEN_ID")) {
