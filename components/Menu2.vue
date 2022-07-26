@@ -72,7 +72,7 @@
       </div>
       <div
         class="border-t md:border-none block justify-between items-center w-full md:flex md:w-auto md:order-1 bottom-0 md:top-0 fixed md:static md:h-0 left-0 transition-all"
-        id="mobile-menu-2" style="background-color: white'
+        id="mobile-menu-2" style="background-color: white;'
         ">
         <div class="md:relative mx-auto lg:float-right lg:px-6">
           <ul class="flex flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium text-center">
@@ -193,6 +193,7 @@ export default {
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
+        /*เก็บ ข้อมูลลง store user*/
         this.$nuxt.$store.commit("user", getProfile);
       } else {
         liff.login();
