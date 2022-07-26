@@ -20,14 +20,15 @@
 const Cookies = process.client ? require("js-cookie") : undefined;
 
 export default {
+
+
   data() {
     return {
       Load: false,
       CookieAllow: "",
-      showHideSpinner: true,
-    };
+      showHideSpinner: true
+    }
   },
-
   methods: {},
   mounted() {
     if (process.client) {
@@ -43,8 +44,10 @@ export default {
   },
   beforeDestroy() { },
   beforeCreate() {
-    document.querySelector("body").style.cssText = "overflow:hidden";
-    this.showHideSpinner = true;
+    if (process.client) {
+      document.querySelector("body").style.cssText = "overflow:hidden";
+      this.showHideSpinner = true;
+    }
   },
   created() {
     if (process.client) {
