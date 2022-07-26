@@ -9,7 +9,9 @@
       <div class="px-4 mx-auto w-full max-w-8xl" style="margin-top: 90px; margin-bottom: 80px">
         <Nuxt />
       </div>
-
+      <div v-if="CookieAllow != 'YES'">
+        <CookiesAllow />
+      </div>
     </div>
   </div>
 </template>
