@@ -57,7 +57,7 @@
         </button>
         <div v-if="$nuxt.$store.state.user" :class="Dop == true ? 'Block' : 'hidden'"
           style="position: fixed; top: 45px; right: 15px; margin-left: 15px"
-          class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+          class="animate-fade-in z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="dropdown">
           <div class="py-3 px-4">
             <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
