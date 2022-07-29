@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="body-font font-Thasadith">
+  <div class="body-font font-Thasadith animate-fade-in">
     <div class="px-4 mx-auto w-full max-w-8xl" style="margin-top: 10px;">
       <div class="grid grid-flow-row auto-rows-max mx-8 my-8">
         <div v-if="$nuxt.$store.state.user" class="p-6 bg-white rounded-lg   ">

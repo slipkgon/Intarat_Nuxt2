@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 ">
-      <b>การตั้งค่า</b>
+    <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 animate-fade-in">
+     การตั้งค่า
     </h5>
     <Home />
   </div>

@@ -168,21 +168,6 @@ export default {
   },
   methods: {
 
-    async getuser() {
-      await this.$axios
-        .$post("Auth", {
-          data: Cookies.get("TOKEN_ID"),
-        })
-        .then((res) => {
-          if (res.Status == 1) {
-            this.$nuxt.$store.commit("TOKEN_ID", res.data);
-          } else {
-            this.$nuxt.$store.commit("TOKEN_ID", "");
-            Cookies.remove("TOKEN_ID");
-            this.$router.push("/");
-          }
-        });
-    },
     top() {
       window.scrollTo(0, 0);
     },
@@ -193,7 +178,7 @@ export default {
   created() {
     if (process.client) {
 
-      this.getuser()
+   
 
       /*
             this.$bus.$emit('unlock', Cookies.get('TOKEN_ID'))
