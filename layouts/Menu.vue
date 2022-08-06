@@ -20,17 +20,24 @@
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
                   </li>
                   <li class="text-center mt-2 mb-2 ">
-                    <NuxtLink to="/"
+                    <NuxtLink to="/" @click="menuhide"
                       :class="$route.name == 'index' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
                       class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
                       <span class="">Home</span>
                     </NuxtLink>
                   </li>
                   <li class="text-center mt-2 mb-2 ">
-                    <NuxtLink to="/About"
+                    <NuxtLink to="/About" @click="menuhide"
                       :class="$route.name == 'About' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
                       class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
                       <span class="">About</span>
+                    </NuxtLink>
+                  </li>
+                  <li class="text-center mt-2 mb-2 ">
+                    <NuxtLink to="/Skill" @click="menuhide"
+                      :class="$route.name == 'Skill' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
+                      class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
+                      <span class="">Skill</span>
                     </NuxtLink>
                   </li>
                 </ul>
@@ -66,6 +73,9 @@ export default {
     }
   },
   methods: {
+    menuhide() {
+      this.$nuxt.$store.commit("menu", false);
+    },
     async getuser() {
       /* liffId จาก Line  */
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
