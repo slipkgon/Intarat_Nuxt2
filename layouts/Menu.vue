@@ -20,25 +20,31 @@
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
                   </li>
                   <li class="text-center mt-2 mb-2 ">
-                    <NuxtLink to="/" @click="menuhide"
-                      :class="$route.name == 'index' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                      class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
-                      <span class="">Home</span>
-                    </NuxtLink>
+                    <span @click="menuhide">
+                      <NuxtLink to="/" @click="menuhide"
+                        :class="$route.name == 'index' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
+                        <span class="">Home</span>
+                      </NuxtLink>
+                    </span>
                   </li>
                   <li class="text-center mt-2 mb-2 ">
-                    <NuxtLink to="/About" @click="menuhide"
-                      :class="$route.name == 'About' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                      class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
-                      <span class="">About</span>
-                    </NuxtLink>
+                    <span @click="menuhide">
+                      <NuxtLink to="/About" @click="menuhide"
+                        :class="$route.name == 'About' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
+                        <span class="">About</span>
+                      </NuxtLink>
+                    </span>
                   </li>
                   <li class="text-center mt-2 mb-2 ">
-                    <NuxtLink to="/Skill" @click="menuhide"
-                      :class="$route.name == 'Skill' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                      class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
-                      <span class="">Skill</span>
-                    </NuxtLink>
+                    <span @click="menuhide">
+                      <NuxtLink @click="menuhide" to="/Skill"
+                        :class="$route.name == 'Skill' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 ">
+                        <span class="">Skill</span>
+                      </NuxtLink>
+                    </span>
                   </li>
                 </ul>
               </nav>
