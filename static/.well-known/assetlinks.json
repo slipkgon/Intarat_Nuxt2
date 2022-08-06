@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.example.intarat",
+                 "sha256_cert_fingerprints": ["DD:06:D5:39:34:72:F1:5D:12:8C:37:7B:FB:85:EB:D1:64:73:8E:95:83:59:2A:4A:77:8D:B1:08:C0:6A:65:50"] }
+  }]

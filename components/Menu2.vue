@@ -28,7 +28,7 @@
       </NuxtLink>
 
       <div class="flex items-center md:order-2 p-2">
-        <button name="theme-toggle" id="theme-toggle" type="button" @click="Themeset"
+        <button aria-label="theme-toggle" name="theme-toggle" id="theme-toggle" type="button" @click="Themeset"
           class="mr-2 text-gray-700 dark:white p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
           <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden dark:block text-gray-900 dark:text-gray-300"
             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" __cpp="1">
