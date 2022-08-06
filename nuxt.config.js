@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Nuxt",
+    title: "Intarat",
     htmlAttrs: {
       lang: "en",
     },
@@ -22,7 +22,12 @@ export default {
   css: ["@/assets/css/tailwind.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {
+      src: "~/plugins/test.js",
+      mode: "client",
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -87,7 +92,7 @@ export default {
       prefer_related_applications: true,
     },
     icon: {
-      fileName: "ST.png",
+      fileName: "Intarat.png",
       sizes: [64, 120, 144, 152, 192, 384, 512],
     },
     start_url: "/",
@@ -121,4 +126,11 @@ export default {
       baseURL: "/",
     },
   },
+  /*
+  middleware: ["Auth"],
+
+  
+ 
+ 
+  */
 };

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <Home />
+    <About />
   </div>
 </template>
 
@@ -10,13 +10,13 @@ export default {
   layout: "Menu",
   head() {
     return {
-      title: "Intarat | Home",
+      title: "Intarat | About",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
-          hid: "Intarat Home",
-          name: "Intarat Home",
-          content: "Intarat Home",
+          hid: "Intarat About",
+          name: "Intarat About",
+          content: "Intarat About",
         },
       ],
     };

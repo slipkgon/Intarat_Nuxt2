@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h5 class="text-center break-all mb-1 text-xl font-medium text-gray-900 animate-fade-in">
-      หน้าแรก
-    </h5>
+    
     <Home />
   </div>
 </template>
