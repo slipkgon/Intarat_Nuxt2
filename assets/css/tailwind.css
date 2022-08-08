@@ -9,6 +9,15 @@
     font-display: swap;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar::-webkit-scrollbar {
+    display: flex;
+}
+
+
 /*
 @layer base {
     html {

@@ -47,12 +47,21 @@
                       </NuxtLink>
                     </span>
                   </li>
+                  <li class="text-center mt-2 mb-2 ">
+                    <span @click="menuhide">
+                      <NuxtLink @click="menuhide" to="/Contact"
+                        :class="$route.name == 'Contact' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 transition-all">
+                        <span class="">Contact</span>
+                      </NuxtLink>
+                    </span>
+                  </li>
                 </ul>
               </nav>
             </div>
             <div class="lg:pl-[19.5rem]">
               <div class="max-w-3xl mx-auto pt-20 xl:max-w-none xl:ml-0  xl:pr-16">
-                <Nuxt class="ml-2" />
+                <Nuxt class="ml-2 mb-16 md:mb-2" />
 
               </div>
             </div>
