@@ -15,7 +15,7 @@
                   <li class="text-center">
                     <div class="py-3 px-4">
                       <nuxt-img width="128" height="161" provider="imgix"
-                        class="rounded m-auto bg-white border border-gray-300 dark:border-gray-700" src="/Intarat.png"
+                        class="rounded-lg m-auto bg-white border border-gray-300 dark:border-gray-700" src="/Intarat.png"
                         alt="Intarat" />
                     </div>
                     <h1 class="text-xl">Intarat Mekloy</h1>
@@ -114,7 +114,7 @@
                       {{ $nuxt.$store.state.user.displayName }}
                     </div>
                     <div class="break-all block text-xs ">
-                      <span @click="logout" class="text-red-500 hover:text-red-600">ออกจากระบบ</span>
+                      <span @click="logout" class="cursor-pointer text-red-500 hover:text-red-600">ออกจากระบบ</span>
                     </div>
                   </div>
                 </div>
