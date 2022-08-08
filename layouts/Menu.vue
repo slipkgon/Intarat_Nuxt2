@@ -14,7 +14,7 @@
                 <ul>
                   <li class="text-center">
                     <div class="py-3 px-4">
-                      <nuxt-img width="128" height="161" provider="imgix"
+                      <nuxt-img format="webp" width="128" height="161" provider="imgix"
                         class="rounded-lg m-auto bg-white border border-gray-300 dark:border-gray-700" src="/Intarat.png"
                         alt="Intarat" />
                     </div>
@@ -105,7 +105,7 @@
 
                 <div class="inline-flex p-2 border rounded-lg border-gray-300 dark:border-gray-700 animate-fade-in"
                   v-if="$nuxt.$store.state.user">
-                  <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-lg"
+                  <nuxt-img format="webp" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-lg"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
                     alt=" User" />
 
