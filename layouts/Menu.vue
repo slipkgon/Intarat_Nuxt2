@@ -113,7 +113,7 @@ export default {
       }, 400)
     },
     async login() {
-      await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
+      await liff.init({ liffId: `1657369059-JnLp4RpO` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
 
