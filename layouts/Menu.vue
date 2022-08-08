@@ -21,6 +21,7 @@
                     <h1 class="text-xl">Intarat Mekloy</h1>
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
                   </li>
+                  <hr class="mt-2 border-gray-700/50 dark:border-gray-400/50" />
                   <li class="text-center mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink to="/" @click="menuhide"
@@ -65,10 +66,13 @@
                   class="m-auto p-2 center-block text-center area-margin">
                   <span @click="login" class="cursor-pointer center-block m-auto"></span>
                 </div>
-                <div class="inline-flex" v-if="$nuxt.$store.state.user">
+
+                <div class="inline-flex p-2 border rounded border-gray-300 dark:border-gray-700"
+                  v-if="$nuxt.$store.state.user">
                   <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
                     alt=" User" />
+
                   <div class="pl-3" style="align-self: center">
                     <div class="break-all block text-sm text-gray-900 dark:text-white">
                       {{ $nuxt.$store.state.user.displayName }}
