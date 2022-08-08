@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-    <div class="body-font font-Thasadith animate-fade-in-up">
+    <div class="body-font font-Thasadith animate-fade-in">
 
         <div class="flex-auto max-w-4xl">
 
@@ -12,6 +12,11 @@
             <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400">ผมชอบการเรียนรู้อะไรใหม่ๆ อยู่เสมอ ครับ
                 สามารถศึกษาค้นคว้าเกี่ยวกับงานเพิ่มเติมได้ เพื่อให้ผลงานออกมาดีที่สุดครับ
             </p>
+
+            <footer class="block dark:text-gray-600">
+                <cite>อะไรที่เราไม่เข้าใจ ถ้าหากเรียนรู้และเข้าใจเราก็จะพัฒนาตนเองขึ้น</cite>
+            </footer>
+
 
 
 

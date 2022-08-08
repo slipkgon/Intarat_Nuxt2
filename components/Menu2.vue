@@ -1,7 +1,7 @@
 <template>
 
   <nav
-    class="bg-gray-100 animate-fade-in border-b dark:border-gray-700 border-gray-300 px-2 sm:px-4 py-2.5 dark:bg-gray-900 transition-all text-gray-700   dark:text-gray-300 "
+    class="select-none bg-gray-100 animate-fade-in border-b dark:border-gray-700 border-gray-300 px-2 sm:px-4 py-2.5 dark:bg-gray-900 transition-all text-gray-700   dark:text-gray-300 "
     style="position: fixed;width: 100%;top: 0;/*border-color: rgb(15 23 42/.1);*/">
 
     <div class="container flex flex-wrap justify-between items-center mx-auto">

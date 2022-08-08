@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-    <div class="body-font font-Thasadith animate-fade-in-up">
+    <div class="body-font font-Thasadith animate-fade-in">
 
         <div class="flex-auto max-w-4xl">
 
