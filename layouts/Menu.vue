@@ -79,7 +79,7 @@
                     </div>
                     <div class="break-all block text-xs ">
                       <span @click="logout"
-                        class="text-gray-700   dark:text-gray-300 hover:text-red-500">ออกจากระบบ</span>
+                        class="text-red-500 hover:text-red-600">ออกจากระบบ</span>
                     </div>
                   </div>
                 </div>
@@ -124,8 +124,10 @@ export default {
         this.hide = false
       }, 400)
     },
-    async logout() {
-      liff.logout()
+    logout() {
+      if (liff.isLoggedIn()) {
+        liff.logout();
+      }
     },
     async login() {
       await liff.init({ liffId: `1657369059-JnLp4RpO` }).catch(err => { throw err });
