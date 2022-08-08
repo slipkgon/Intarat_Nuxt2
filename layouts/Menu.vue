@@ -65,14 +65,18 @@
                   class="m-auto p-2 center-block text-center area-margin">
                   <span @click="login" class="cursor-pointer center-block m-auto"></span>
                 </div>
-                <div class="py-3 px-4" v-if="$nuxt.$store.state.user">
+                <div class="inline-flex" v-if="$nuxt.$store.state.user">
                   <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
                     alt=" User" />
-                  <span class="break-all block text-sm text-gray-900 dark:text-white">{{
-                      $nuxt.$store.state.user.displayName
-                  }}</span>
+                  <div class="pl-3" style="align-self: center">
+                    <div class="break-all block text-sm text-gray-900 dark:text-white">
+                      {{ $nuxt.$store.state.user.displayName }}
+                    </div>
+                  </div>
                 </div>
+
+
               </div>
 
             </div>
