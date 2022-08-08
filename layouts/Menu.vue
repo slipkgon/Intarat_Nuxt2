@@ -9,7 +9,7 @@
             <div :class="$nuxt.$store.state.menu == true ? hide == true ? 'animate-fade-out' : '' : 'hidden'"
               class="no-scrollbar pt-1 dark:bg-gray-900 animate-fade-in bg-gray-100 border-gray-300 border-r dark:border-gray-700 dark:text-gray-200 lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-20 px-8 overflow-y-auto ">
 
-              <nav id="nav" class="z-10 select-none lg:text-sm lg:leading-6 relative mt-2">
+              <nav id="nav" class="z-10 select-none lg:text-sm lg:leading-6 relative mt-4">
                 <div v-if="hide == true" class="md:hidden flex h-full fixed top-0 right-0 left-0"></div>
                 <ul>
                   <li class="text-center">
@@ -21,7 +21,7 @@
                     <h1 class="text-xl">Intarat Mekloy</h1>
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
                   </li>
-                  <hr class="mt-2 border-gray-700/50 dark:border-gray-400/50" />
+                  <!-- <hr class="mt-2 border-gray-700/50 dark:border-gray-400/50" />-->
                   <li class="ml-4 mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink to="/" class="w-full dark:focus:text-white dark:hover:text-white  flex text-center p-1"
@@ -96,8 +96,8 @@
                   </li>
                 </ul>
               </nav>
-              <hr class="p-2 mt-2 border-gray-700/50 dark:border-gray-400/50" />
-              <div class="justify-center items-center bottom-0 flex">
+
+              <div class="justify-center items-center  flex mt-4">
                 <div v-if="!$nuxt.$store.state.user" id="web-login-button"
                   class="m-auto p-2 center-block text-center area-margin animate-fade-in">
                   <span @click="login" class="cursor-pointer center-block m-auto"></span>
@@ -119,8 +119,8 @@
                   </div>
                 </div>
               </div>
-              <hr class="p-2 mt-2 border-gray-700/50 dark:border-gray-400/50" />
-              <div class="text-center">
+
+              <div class="text-center mt-4">
                 <a href="https://www.facebook.com/Accidomz" rel="Intarat facebook" target="_blank"
                   aria-label="Intarat facebook" title="Intarat facebook" class="inline-block m-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
