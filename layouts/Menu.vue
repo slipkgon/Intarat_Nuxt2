@@ -7,7 +7,7 @@
         <div>
           <div style="z-index: 100;" class="max-w-8xl mx-auto px-4 ">
             <div :class="$nuxt.$store.state.menu == true ? hide == true ? 'animate-fade-out' : '' : 'hidden'"
-              class="pt-1 dark:bg-gray-900 animate-fade-in bg-gray-100 border-gray-300 border-r dark:border-gray-700 dark:text-gray-200 lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto">
+              class="no-scrollbar pt-1 dark:bg-gray-900 animate-fade-in bg-gray-100 border-gray-300 border-r dark:border-gray-700 dark:text-gray-200 lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-20 px-8 overflow-y-auto ">
 
               <nav id="nav" class="z-10 select-none lg:text-sm lg:leading-6 relative mt-2">
                 <div v-if="hide == true" class="md:hidden flex h-full fixed top-0 right-0 left-0"></div>
@@ -105,7 +105,7 @@
 
                 <div class="inline-flex p-2 border rounded-full border-gray-300 dark:border-gray-700 animate-fade-in"
                   v-if="$nuxt.$store.state.user">
-                  <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
+                  <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-lg"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
                     alt=" User" />
 
@@ -141,7 +141,8 @@
 
             </div>
 
-            <div @click="menuhide" class="md:hidden z-0 flex h-full fixed top-0 right-0 left-0"></div>
+            <div v-if="$nuxt.$store.state.menu == true" @click="menuhide"
+              class="md:hidden z-0 flex h-full fixed top-0 right-0 left-0"></div>
             <div class="lg:pl-[19.5rem]">
               <div class="max-w-3xl mx-auto pt-20 xl:max-w-none xl:ml-0  xl:pr-16">
                 <Nuxt class="ml-2 mb-16 md:mb-2" />
