@@ -63,11 +63,11 @@
               <hr class="p-2 mt-2 border-gray-700/50 dark:border-gray-400/50" />
               <div class="justify-center items-center bottom-0 flex">
                 <div v-if="!$nuxt.$store.state.user" id="web-login-button"
-                  class="m-auto p-2 center-block text-center area-margin">
+                  class="m-auto p-2 center-block text-center area-margin animate-fade-in">
                   <span @click="login" class="cursor-pointer center-block m-auto"></span>
                 </div>
 
-                <div class="inline-flex p-2 border rounded border-gray-300 dark:border-gray-700"
+                <div class="inline-flex p-2 border rounded border-gray-300 dark:border-gray-700 animate-fade-in"
                   v-if="$nuxt.$store.state.user">
                   <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
@@ -78,8 +78,7 @@
                       {{ $nuxt.$store.state.user.displayName }}
                     </div>
                     <div class="break-all block text-xs ">
-                      <span @click="logout"
-                        class="text-red-500 hover:text-red-600">ออกจากระบบ</span>
+                      <span @click="logout" class="text-red-500 hover:text-red-600">ออกจากระบบ</span>
                     </div>
                   </div>
                 </div>
@@ -126,6 +125,7 @@ export default {
     },
     logout() {
       if (liff.isLoggedIn()) {
+        this.$nuxt.$store.commit("user", "");
         liff.logout();
       }
     },
