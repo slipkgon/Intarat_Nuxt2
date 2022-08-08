@@ -14,8 +14,9 @@
                 <ul>
                   <li class="text-center">
                     <div class="py-3 px-4">
-                      <nuxt-img provider="imgix" class="w-32 rounded m-auto bg-white border border-gray-300 dark:border-gray-700" src="/Intarat.png"
-                        alt="Intarat" />
+                      <nuxt-img width="128" height="161.66" provider="imgix"
+                        class="w-32 rounded m-auto bg-white border border-gray-300 dark:border-gray-700"
+                        src="/Intarat.png" alt="Intarat" />
                     </div>
                     <h1 class="text-xl">Intarat Mekloy</h1>
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
