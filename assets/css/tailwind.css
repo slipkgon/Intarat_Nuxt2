@@ -9,6 +9,13 @@
     font-display: swap;
 }
 
+#web-login-button span {
+    width: 151px;
+    height: 44px;
+    background: url(/btn_login_base.png) no-repeat;
+    display: block;
+}
+
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }

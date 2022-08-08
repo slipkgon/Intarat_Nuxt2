@@ -9,7 +9,7 @@
             <div :class="$nuxt.$store.state.menu == true ? hide == true ? 'animate-fade-out' : '' : 'hidden'"
               class="pt-1 dark:bg-gray-900 animate-fade-in bg-gray-100 border-gray-300 border-r dark:border-gray-700 dark:text-gray-200 lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto">
 
-              <nav id="nav" class="select-none lg:text-sm lg:leading-6 relative mt-2">
+              <nav id="nav" class="z-10 select-none lg:text-sm lg:leading-6 relative mt-2">
                 <div v-if="hide == true" class="md:hidden flex h-full fixed top-0 right-0 left-0"></div>
                 <ul>
                   <li class="text-center">
@@ -59,11 +59,27 @@
                   </li>
                 </ul>
               </nav>
+              <hr class="p-2 mt-2 border-gray-700/50 dark:border-gray-400/50" />
+              <div class="justify-center items-center bottom-0 flex">
+                <div v-if="!$nuxt.$store.state.user" id="web-login-button"
+                  class="m-auto p-2 center-block text-center area-margin">
+                  <span @click="login" class="cursor-pointer center-block m-auto"></span>
+                </div>
+                <div class="py-3 px-4" v-if="$nuxt.$store.state.user">
+                  <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-full"
+                    :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
+                    alt=" User" />
+                  <span class="break-all block text-sm text-gray-900 dark:text-white">{{
+                      $nuxt.$store.state.user.displayName
+                  }}</span>
+                </div>
+              </div>
+
             </div>
+            <div @click="menuhide" class="md:hidden z-0 flex h-full fixed top-0 right-0 left-0"></div>
             <div class="lg:pl-[19.5rem]">
               <div class="max-w-3xl mx-auto pt-20 xl:max-w-none xl:ml-0  xl:pr-16">
                 <Nuxt class="ml-2 mb-16 md:mb-2" />
-
               </div>
             </div>
           </div>
@@ -96,20 +112,29 @@ export default {
         this.hide = false
       }, 400)
     },
-    async getuser() {
-      /* liffId จาก Line  */
+    async login() {
       await liff.init({ liffId: `1657325116-MR5lQD7n` }).catch(err => { throw err });
       if (liff.isLoggedIn()) {
         let getProfile = await liff.getProfile();
 
         this.$nuxt.$store.commit("user", getProfile);
 
-        setTimeout(() => {
-          document.querySelector("body").style.cssText = "";
-          this.showHideSpinner = false;
-        }, 1000)
+
       } else {
         liff.login();
+      }
+    },
+    async getuser() {
+      /* liffId จาก Line  */
+      await liff.init({ liffId: `1657369059-JnLp4RpO` }).catch(err => { throw err });
+      if (liff.isLoggedIn()) {
+        let getProfile = await liff.getProfile();
+
+        this.$nuxt.$store.commit("user", getProfile);
+
+
+      } else {
+
       }
 
     }
@@ -130,10 +155,10 @@ export default {
   },
   created() {
     if (process.client) {
-      console.log()
+      this.getuser()
       /*
       
-      this.getuser()
+    
       
 
     
