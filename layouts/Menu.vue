@@ -14,8 +14,8 @@
                 <ul>
                   <li class="text-center">
                     <div class="py-3 px-4">
-                      <nuxt-img provider="imgix" class="w-32 h-32 rounded-full m-auto dark:bg-white" src="/Intarat.png"
-                        alt="Intarat" />
+                      <nuxt-img provider="imgix" class="w-32 h-32 rounded-full m-auto bg-white"
+                        src="/Intarat.png" alt="Intarat" />
                     </div>
                     <h1 class="text-xl">Intarat Mekloy</h1>
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
@@ -23,8 +23,8 @@
                   <li class="text-center mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink to="/" @click="menuhide"
-                        :class="$route.name == 'index' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold  text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 transition-all">
+                        :class="$route.name == 'index' ? 'border-b border-gray-700 dark:border-gray-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold  text-gray-700   dark:text-gray-300 dark:hover:text-gray-500 hover:text-gray-500 transition-all">
                         <span class="">Home</span>
                       </NuxtLink>
                     </span>
@@ -32,8 +32,8 @@
                   <li class="text-center mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink to="/About" @click="menuhide"
-                        :class="$route.name == 'About' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 transition-all">
+                        :class="$route.name == 'About' ? 'border-b border-gray-700 dark:border-gray-400' : ''"
+                        class=" group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-gray-700   dark:text-gray-300 dark:hover:text-gray-500 hover:text-gray-500 transition-all">
                         <span class="">About</span>
                       </NuxtLink>
                     </span>
@@ -41,8 +41,8 @@
                   <li class="text-center mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink @click="menuhide" to="/Skill"
-                        :class="$route.name == 'Skill' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 transition-all">
+                        :class="$route.name == 'Skill' ? 'border-b border-gray-700 dark:border-gray-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-gray-700   dark:text-gray-300 dark:hover:text-gray-500 hover:text-gray-500 transition-all">
                         <span class="">Skill</span>
                       </NuxtLink>
                     </span>
@@ -50,8 +50,8 @@
                   <li class="text-center mt-2 mb-2 ">
                     <span @click="menuhide">
                       <NuxtLink @click="menuhide" to="/Contact"
-                        :class="$route.name == 'Contact' ? 'border-b border-sky-400 dark:border-sky-400' : ''"
-                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-400 dark:text-sky-400 dark:hover:text-sky-500 hover:text-sky-500 transition-all">
+                        :class="$route.name == 'Contact' ? 'border-b border-gray-700 dark:border-gray-400' : ''"
+                        class="group justify-center  items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-gray-700   dark:text-gray-300 dark:hover:text-gray-500 hover:text-gray-500 transition-all">
                         <span class="">Contact</span>
                       </NuxtLink>
                     </span>
