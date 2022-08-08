@@ -103,7 +103,7 @@
                   <span @click="login" class="cursor-pointer center-block m-auto"></span>
                 </div>
 
-                <div class="inline-flex p-2 border rounded-full border-gray-300 dark:border-gray-700 animate-fade-in"
+                <div class="inline-flex p-2 border rounded-lg border-gray-300 dark:border-gray-700 animate-fade-in"
                   v-if="$nuxt.$store.state.user">
                   <nuxt-img :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-lg"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
