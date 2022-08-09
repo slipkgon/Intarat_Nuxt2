@@ -53,7 +53,7 @@
           class="hidden  mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
           <span class="sr-only">Open user menu</span>
-          <nuxt-img provider="imgix" class="w-10 h-10 rounded-full m-auto dark:bg-white" src="/Intarat.png"
+          <nuxt-img loading="lazy" format="webp" provider="imgix" class="w-10 h-10 rounded-full m-auto dark:bg-white" src="/Intarat.png"
             alt=" Intarat" />
         </button>
         <div :class="Dop == true ? 'Block' : 'hidden'"
@@ -61,7 +61,7 @@
           class="animate-fade-in z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="dropdown">
           <div class="py-3 px-4 ">
-            <nuxt-img provider="imgix" class="w-14 h-14 rounded-full m-auto" src="/Intarat.png" alt="Intarat" />
+            <nuxt-img loading="lazy" format="webp" provider="imgix" class="w-14 h-14 rounded-full m-auto" src="/Intarat.png" alt="Intarat" />
             <span class="break-all block text-sm text-gray-900 dark:text-gray-300">Intarat Mekloy</span>
           </div>
         </div>
