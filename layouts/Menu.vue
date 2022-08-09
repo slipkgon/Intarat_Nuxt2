@@ -15,8 +15,8 @@
                   <li class="text-center">
                     <div class="py-3 px-4">
                       <nuxt-img loading="lazy" format="webp" width="128" height="161" provider="imgix"
-                        class="rounded-lg m-auto bg-white border border-gray-300 dark:border-gray-700" src="/Intarat.png"
-                        alt="Intarat" />
+                        class="rounded-lg m-auto bg-white border border-gray-300 dark:border-gray-700"
+                        src="/Intarat.png" alt="Intarat" />
                     </div>
                     <h1 class="text-xl">Intarat Mekloy</h1>
                     <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
@@ -105,7 +105,8 @@
 
                 <div class="inline-flex p-2 border rounded-lg border-gray-300 dark:border-gray-700 animate-fade-in"
                   v-if="$nuxt.$store.state.user">
-                  <nuxt-img loading="lazy" format="webp" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'" class="w-14 h-14 rounded-lg"
+                  <nuxt-img loading="lazy" format="webp" :provider="$nuxt.$store.state.user.pictureUrl ? '' : 'imgix'"
+                    class="w-14 h-14 rounded-lg"
                     :src="$nuxt.$store.state.user.pictureUrl != '' ? $nuxt.$store.state.user.pictureUrl : '/user.png'"
                     alt=" User" />
 
@@ -135,6 +136,14 @@
                     class="w-6 h-6 text-gray-700   dark:text-gray-300" viewBox="0 0 16 16">
                     <path
                       d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0ZM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157Zm.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156h-.562Zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832a.17.17 0 0 0-.013-.015v-.001a.139.139 0 0 0-.01-.01l-.003-.003a.092.092 0 0 0-.011-.009h-.001L7.88 4.79l-.003-.002a.029.029 0 0 0-.005-.003l-.008-.005h-.002l-.003-.002-.01-.004-.004-.002a.093.093 0 0 0-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.154.154 0 0 0 .039.038l.001.001.01.006.004.002a.066.066 0 0 0 .008.004l.007.003.005.002a.168.168 0 0 0 .01.003h.003a.155.155 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156h-.561Zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.155.155 0 0 0-.108.044h-.001l-.001.002-.002.003a.155.155 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.155.155 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
+                  </svg>
+                </a>
+                <a href="https://github.com/slipkgon/Portfolio-Intarat" rel="Intarat github" target="_blank"
+                  aria-label="Intarat github" title="Intarat github" class="inline-block m-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="w-6 h-6 text-gray-700   dark:text-gray-300" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                   </svg>
                 </a>
               </div>
