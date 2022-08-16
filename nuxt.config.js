@@ -41,6 +41,7 @@ export default {
     "@nuxt/postcss8",
     "nuxt-purgecss",
     "@nuxt/image",
+    "@nuxtjs/web-vitals",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -96,6 +97,11 @@ export default {
       sizes: [64, 120, 144, 152, 192, 384, 512],
     },
     start_url: "/",
+  },
+  webVitals: {
+    // provider: '', // auto detectd
+    debug: false,
+    disabled: false,
   },
   generate: {
     cache: {
