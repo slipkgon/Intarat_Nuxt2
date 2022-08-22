@@ -13,9 +13,9 @@
                 สามารถศึกษาค้นคว้าเกี่ยวกับงานเพิ่มเติมได้ เพื่อให้ผลงานออกมาดีที่สุดครับ
             </p>
 
-            <footer class="p-2 block text-sm text-slate-600 dark:text-slate-400">
+            <p class="p-2 block text-sm text-slate-600 dark:text-slate-400">
                 <cite>อะไรที่เราไม่เข้าใจ ถ้าหากเรียนรู้และเข้าใจเราก็จะพัฒนาตนเองขึ้น</cite>
-            </footer>
+            </p>
 
 
 
