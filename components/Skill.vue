@@ -43,7 +43,7 @@ export default {
             user: '',
             formImgShow: false,
 
-            Skilldata: [{ Name: 'Html', IMG: '/Html.png' },
+            Skilldata: [{ Name: 'Html', IMG: '/html.png' },
             { Name: 'CSS', IMG: '/CSS.png' },
             { Name: 'JavaScript', IMG: '/JavaScript.png' },
             { Name: 'PHP', IMG: '/php.png' },
