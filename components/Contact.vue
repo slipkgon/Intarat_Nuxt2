@@ -45,7 +45,7 @@
                         </g>
                     </svg>
 
-                    <span class="tab tab-home block text-xs">Mobile</span>
+                    <span class="tab tab-home block text-xs">Mail</span>
                 </div>
                 <div class="pl-3" style="align-self: center">
                     <div class="break-all block text-sm text-gray-700   dark:text-gray-300">
@@ -70,7 +70,7 @@
                         </g>
                     </svg>
 
-                    <span class="tab tab-home block text-xs">Mobile</span>
+                    <span class="tab tab-home block text-xs">Address</span>
                 </div>
                 <div class="pl-3" style="align-self: center">
                     <div class="break-all block text-sm text-gray-700   dark:text-gray-300">
