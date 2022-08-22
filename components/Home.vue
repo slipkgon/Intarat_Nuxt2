@@ -10,24 +10,23 @@
         อินทรัตน์ เมฆลอย
       </h1>
 
-      <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400">กำลังสนใจ งาน เกี่ยวกับ โปรแกรมเมอร์ ครับ
+      <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400">อายุ 23 ปี
       </p>
-      <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400"> ตอนนี้กำลังศึกษาอยู่ ชั้น ปวช สาขา
-        คอมพิวเตอร์ธุรกิจ
-        เป็นรอบพิเศษครับ
-        อนาคต คาดว่าจะเรียนจนถึง ปริญญาตรี สาขาเกี่ยวกับ เทคโนโลยีสารสนเทศ ครับ
+      <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400"> กำลังศึกษาอยู่ ชั้น ปวช ปี 2 สาขา
+        คอมพิวเตอร์ธุรกิจ รอบภาคสมทบ
       </p>
-
-
+      <p class="p-2 mt-4 text-lg text-slate-700 dark:text-slate-400">
+        รายละเอียดอื่นๆ กำลัง ทยอย อัพเดท ครับ
+      </p>
       <a type="button" href="/Intarat Mekloy.pdf" download=""
         class="p-2 mt-4  text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-4 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">สามารถ
         Download ข้อมูลเพิ่มเติมเกี่ยวกับผมได้ที่นี้ครับ</a>
 
-      <nuxt-img   format="webp" provider="imgix" class="max-w-xs md:max-w-sm rounded dark:bg-white shadow" src="/twa.jpg" width="360"
-        height="160" alt=" twa" />
+      <nuxt-img format="webp" provider="imgix" class="max-w-xs md:max-w-sm rounded dark:bg-white shadow" src="/twa.jpg"
+        width="360" height="160" alt=" twa" />
       <a type="button" href="/Intarat App.apk" download=""
-        class="p-2 mt-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-4 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">สามารถทดลอง
-        TWA ได้ที่นี้ครับ</a>
+        class="p-2 mt-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-4 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+        เว็บนี้ได้ทำ TWA สามารถ Download TWA เพื่อทดสอบไหด้ที่นี้ครับ</a>
 
     </div>
 
