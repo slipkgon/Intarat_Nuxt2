@@ -83,6 +83,7 @@ export default {
             { Name: 'Socket.IO', IMG: '/Socket.png' },
             { Name: 'Bootstrap', IMG: '/Bootstrap.png' },
             { Name: 'Tailwind CSS', IMG: '/Tailwind.jpg' },
+            { Name: 'LINE Developers', IMG: '/1_LN6dNoiK-u8rccMizFl46w.png' },
             ],
             OtherSkilldata: [{ Name: 'Microsoft Excel', IMG: '/Excel.png' },
             { Name: 'Microsoft Word', IMG: '/Word.png' },
@@ -95,7 +96,7 @@ export default {
             { Name: 'Adobe Photoshop', IMG: '/photoshop.svg' },
             { Name: 'Adobe Illustrator', IMG: '/illustrator.svg' },
             { Name: 'Adobe Premiere Pro', IMG: '/desktop_premiere.svg' },
-
+            { Name: 'Visual Basic.NET', IMG: '/vbnet.jpg' },
             ]
 
 
