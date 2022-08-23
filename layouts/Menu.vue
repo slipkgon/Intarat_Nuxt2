@@ -19,7 +19,7 @@
                         src="/Intarat.png" alt="Intarat" />
                     </div>
                     <h1 class="text-xl">Intarat Mekloy</h1>
-                    <h2 class="text-sm dark:text-gray-400">Web Developer</h2>
+                    <h2 class="text-sm dark:text-gray-400">Full Stack Developer</h2>
                   </li>
                   <!-- <hr class="mt-2 border-gray-700/50 dark:border-gray-400/50" />-->
                   <li class="ml-4 mt-2 mb-2 ">
