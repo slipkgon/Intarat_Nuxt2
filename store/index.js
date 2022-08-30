@@ -1,6 +1,6 @@
 export const state = () => ({
   user: "",
-  Theme: "",
+  Theme: "B",
   menu: false,
 });
 

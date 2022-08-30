@@ -6,7 +6,7 @@ export default function ({ app }) {
   */
   console.log(Cookies.get("Theme"));
   if (!Cookies.get("Theme")) {
-    app.store.commit("Theme", "W");
+    app.store.commit("Theme", "B");
   } else {
     if (Cookies.get("Theme") == "B") {
       app.store.commit("Theme", "B");

@@ -260,7 +260,8 @@ export default {
     if (process.client) {
 
       if (!Cookies.get("Theme")) {
-        this.$nuxt.$store.commit("Theme", "W");
+        this.$nuxt.$store.commit("Theme", "B");
+        document.querySelector("body").classList.add("dark");
       } else {
         if (Cookies.get("Theme") == "B") {
           this.$nuxt.$store.commit("Theme", "B");
